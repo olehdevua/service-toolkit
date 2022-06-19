@@ -1,0 +1,1 @@
+{"version":3,"file":"http.etag.d.ts","sourceRoot":"","sources":["../../src/http/http.etag.ts"],"names":[],"mappings":";;AACA,OAAO,EAAE,KAAK,EAAE,MAAM,IAAI,CAAC;AAE3B,wBAAgB,SAAS,CACvB,MAAM,EAAE,MAAM,GAAG,MAAM,EACvB,EAAE,IAAI,EAAE,EAAE;IAAE,IAAI,EAAE,OAAO,CAAA;CAAE,UAmB5B;AAGD,wBAAgB,OAAO,CAAE,IAAI,EAAE,KAAK,GAAG,MAAM,CAK5C"}

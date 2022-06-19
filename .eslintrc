@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "quotes": [ 2, "double", { "allowTemplateLiterals": true } ],
+    "indent": [ "error", 2, {
+      "SwitchCase": 1
+    }],
+    "max-len": [ "error", {
+      "code": 85,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "ignoreUrls": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    } ],
+    "semi": [ "error", "always" ],
+    "comma-dangle": [ "error", "only-multiline" ],
+    "array-bracket-spacing": [ "error", "always" ],
+    "object-curly-spacing": [ "error", "always" ],
+    "camelcase": [ "warn" ],
+    "no-unused-vars": [ "warn" ],
+    "complexity": ["error", 12]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/indent": [ "error", 2 ],
+        "@typescript-eslint/no-use-before-define": [ "off" ],
+        "@typescript-eslint/no-explicit-any": [ "warn" ]
+      }
+    },
+    {
+      "files": [
+        "test/**/*.js",
+        "test/*.js"
+      ],
+      "parser": "esprima",
+      "env": {
+        "node": true,
+        "es6": true,
+        "commonjs": true
+      },
+      "parserOptions": {
+        "ecmaVersion": 2021
+      }
+    }
+  ]
+}

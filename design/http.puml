@@ -1,0 +1,29 @@
+@startuml
+
+!theme toy
+scale 3300 width
+
+class FileSender {
+  -httpSender: HttpRespSender,
+  -cacheManager: CacheManager,
+  -logger: Logger,
+  -o: SendStreamOpts
+}
+FileSender::httpSender --* HttpRespSender
+FileSender::cacheManager --* CacheManager
+
+class CacheManager {
+  -reqHeaders: IncomingHttpHeaders,
+  -httpSender: HttpRespSender,
+  -o: CacheOpts
+}
+CacheManager::httpSender --* HttpRespSender
+
+class HttpRespSender {
+  #resp: http.ServerResponse,
+  #method: string,
+  #pathname: string,
+}
+
+
+@enduml
